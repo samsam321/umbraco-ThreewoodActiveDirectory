@@ -1,0 +1,15 @@
+﻿{  
+  "javascript": [
+    "~/App_Plugins/ThreewoodActiveDirectory/js/dashboard.controller.js",    
+    "~/App_Plugins/ThreewoodActiveDirectory/js/member.role.controller.js",        
+    "~/App_Plugins/ThreewoodActiveDirectory/directives/dashboard.directive.js",
+    "~/App_Plugins/ThreewoodActiveDirectory/directives/modal.dialog.directive.js",        
+    "~/App_Plugins/ThreewoodActiveDirectory/directives/member.role.directive.js",        
+    "~/App_Plugins/ThreewoodActiveDirectory/scripts/smart-table.js"
+  ],
+  "css": [
+    "~/App_Plugins/ThreewoodActiveDirectory/css/dashboard.css",
+    "~/App_Plugins/ThreewoodActiveDirectory/css/modal.dialog.css",
+    "~/App_Plugins/ThreewoodActiveDirectory/css/member.role.dialog.css"
+  ]
+}

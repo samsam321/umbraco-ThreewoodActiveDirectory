@@ -1,0 +1,211 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<umbPackage>
+  <files>
+	<!-- Asset -->
+    <file>
+      <guid>logo.png</guid>
+      <orgPath>/App_Plugins/ThreewoodActiveDirectory/assets</orgPath>
+      <orgName>logo.png</orgName>
+    </file>     
+	<file>
+      <guid>Dashboard.png</guid>
+      <orgPath>/App_Plugins/ThreewoodActiveDirectory/assets</orgPath>
+      <orgName>Dashboard.png</orgName>
+    </file>     
+	<file>
+      <guid>Dashboard_AssignRole.png</guid>
+      <orgPath>/App_Plugins/ThreewoodActiveDirectory/assets</orgPath>
+      <orgName>Dashboard_AssignRole.png</orgName>
+    </file>     
+	<file>
+      <guid>Dashboard_Load.png</guid>
+      <orgPath>/App_Plugins/ThreewoodActiveDirectory/assets</orgPath>
+      <orgName>Dashboard_Load.png</orgName>
+    </file>     
+	<file>
+      <guid>ThreewoodActiveDirectory.dll</guid>
+      <orgPath>/bin</orgPath>
+      <orgName>ThreewoodActiveDirectory.dll</orgName>
+    </file>
+	
+	<!-- Css -->
+    <file>
+      <guid>dashboard.css</guid>
+      <orgPath>/App_Plugins/ThreewoodActiveDirectory/css</orgPath>
+      <orgName>dashboard.css</orgName>
+    </file>	
+	<file>
+      <guid>member.role.dialog.css</guid>
+      <orgPath>/App_Plugins/ThreewoodActiveDirectory/css</orgPath>
+      <orgName>member.role.dialog.css</orgName>
+    </file>	
+	<file>
+      <guid>modal.dialog.css</guid>
+      <orgPath>/App_Plugins/ThreewoodActiveDirectory/css</orgPath>
+      <orgName>modal.dialog.css</orgName>
+    </file>	
+	
+	<!-- Directives -->
+    <file>
+      <guid>dashboard.directive.js</guid>
+      <orgPath>/App_Plugins/ThreewoodActiveDirectory/directives</orgPath>
+      <orgName>dashboard.directive.js</orgName>
+    </file>
+	<file>
+      <guid>member.role.directive.js</guid>
+      <orgPath>/App_Plugins/ThreewoodActiveDirectory/directives</orgPath>
+      <orgName>member.role.directive.js</orgName>
+    </file>
+	<file>
+      <guid>modal.dialog.directive.js</guid>
+      <orgPath>/App_Plugins/ThreewoodActiveDirectory/directives</orgPath>
+      <orgName>modal.dialog.directive.js</orgName>
+    </file>
+		
+	<!-- Js -->
+	<file>
+      <guid>dashboard.controller.js</guid>
+      <orgPath>/App_Plugins/ThreewoodActiveDirectory/js</orgPath>
+      <orgName>dashboard.controller.js</orgName>
+    </file>	
+	<file>
+      <guid>member.role.controller.js</guid>
+      <orgPath>/App_Plugins/ThreewoodActiveDirectory/js</orgPath>
+      <orgName>member.role.controller.js</orgName>
+    </file>	
+	
+	<!-- Language -->
+	<file>
+      <guid>en-GB.xml</guid>
+      <orgPath>/App_Plugins/ThreewoodActiveDirectory/lang</orgPath>
+      <orgName>en-GB.xml</orgName>
+    </file>
+    <file>
+      <guid>en-US.xml</guid>
+      <orgPath>/App_Plugins/ThreewoodActiveDirectory/lang</orgPath>
+      <orgName>en-US.xml</orgName>
+    </file>
+	
+	<!-- scripts -->
+    <file>
+      <guid>smart-table.js</guid>
+      <orgPath>/App_Plugins/ThreewoodActiveDirectory/scripts</orgPath>
+      <orgName>smart-table.js</orgName>
+    </file>
+
+	
+	<!-- Templates -->
+	<file>
+      <guid>member.role.html</guid>
+      <orgPath>/App_Plugins/ThreewoodActiveDirectory/template</orgPath>
+      <orgName>member.role.html</orgName>
+    </file>
+	<file>
+      <guid>modal.dialog.html</guid>
+      <orgPath>/App_Plugins/ThreewoodActiveDirectory/template</orgPath>
+      <orgName>modal.dialog.html</orgName>
+    </file>
+	<file>
+      <guid>pagination.custom.html</guid>
+      <orgPath>/App_Plugins/ThreewoodActiveDirectory/template</orgPath>
+      <orgName>pagination.custom.html</orgName>
+    </file>
+	
+	<!-- Views -->
+    <file>
+      <guid>dashboard.html</guid>
+      <orgPath>/App_Plugins/ThreewoodActiveDirectory/views</orgPath>
+      <orgName>dashboard.html</orgName>
+    </file>
+	
+	<!-- Manifest -->
+    <file>
+      <guid>package.manifest</guid>
+      <orgPath>/App_Plugins/ThreewoodActiveDirectory</orgPath>
+      <orgName>package.manifest</orgName>
+    </file>    
+	
+  </files>  
+  <info>
+    <package>
+      <name>ThreewoodActiveDirectory</name>
+      <version>0.1.0</version>
+      <iconUrl />
+      <license url="http://opensource.org/licenses/MIT">MIT License</license>
+      <url>https://github.com/samsam321/umbraco-ThreewoodActiveDirectory</url>
+      <requirements type="strict">
+        <major>7</major>
+        <minor>7</minor>
+        <patch>2</patch>
+      </requirements>
+    </package>
+    <author>
+      <name>SamAY</name>
+      <website>https://www.linkedin.com/in/threewood/</website>
+    </author>
+    <readme><![CDATA[
+	<p>Thank you for installing Threewood Umbraco ThreewoodActiveDirectory.</p>
+	
+	<p>When you uninstall package completed, it will show a error message, the reason is the dll deleted and un-referenced.You need modify web.config by yourself to umbraco default setting. Add the default UmbracoMembershipProvider to web.config.</p>
+	
+	<p>
+	Example :
+	<add name="UmbracoMembershipProvider" type="Umbraco.Web.Security.Providers.MembersMembershipProvider, Umbraco" 
+	minRequiredNonalphanumericCharacters="0" minRequiredPasswordLength="10" useLegacyEncoding="false" enablePasswordRetrieval="false" enablePasswordReset="false" requiresQuestionAndAnswer="false" defaultMemberTypeAlias="Member" passwordFormat="Hashed" allowManuallyChangingPassword="false" requiresUniqueEmail="false" /></p>
+          
+	<p>After installed,</p>
+	
+	<p>1. In Membership provider section add</p>
+	
+	<p><add name="UmbracoMembershipProvider" type="ThreewoodActiveDirectory.Provider.ExtendedMembersMembershipProvider, ThreewoodActiveDirectory" minRequiredNonalphanumericCharacters="0" minRequiredPasswordLength="8" useLegacyEncoding="true" enablePasswordRetrieval="false" enablePasswordReset="true" requiresQuestionAndAnswer="false" defaultMemberTypeAlias="Member" passwordFormat="Hashed" allowManuallyChangingPassword="true"/></p>
+
+	<p>this setting will let umbraco use ThreewoodActiveDirectory As Membership Provider, member login authenicate by your own AD</p>
+	
+	
+	<p>2. In  <appSettings> section add
+	<!-- ThreewoodActiveDirectory-->
+    <add key="ThreewoodActiveDirectory:DomainName" value="your AD domain host name"/>    
+    <!-- End of ThreewoodActiveDirectory--></p>
+	
+	
+	<p>this setting will affect the login name of member </p>
+	
+	<p>
+	example : 
+	
+	domain host name = abc
+	
+	<add key="ThreewoodActiveDirectory:DomainName" value="abc"/>    
+	
+	all member imported login name become abc\yourlogin
+	
+	3. In  <connectionStrings> add
+	    
+    <add name="LDAPConnectionString" connectionString="LDAP://yourownAD" /></p>
+  
+	
+	
+		 
+                             
+]]></readme>
+  </info>
+  <DocumentTypes />
+  <Templates />
+  <Stylesheets />
+  <Macros />
+  <DictionaryItems />
+  <Languages />
+  <DataTypes />
+  <Actions>
+    <Action runat="install" alias="addDashboardSection" dashboardAlias="ThreewoodActiveDirectoryDashboardSection">
+      <section>
+        <areas>
+          <area>member</area>
+        </areas>
+        <tab caption="ActiveDirectory">
+          <control showOnce="false" addPanel="false" panelCaption="">/app_plugins/ThreewoodActiveDirectory/views/dashboard.html</control>
+        </tab>
+      </section>
+    </Action>
+  </Actions>
+</umbPackage>

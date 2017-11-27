@@ -1,0 +1,75 @@
+﻿<div class="welcome-dashboard" ng-controller="Threewood.ActiveDirectory.Dashboard.ViewController">
+    <umb-load-indicator ng-hide="!showLoader"></umb-load-indicator>
+
+    <div class="row-fluid">
+        <div class="umb-sub-header">
+            <h3 class="title"><localize key="ThreewoodActiveDirectory_Dashboard.Title"></localize></h3>
+            <div class="subtitle"><localize key="ThreewoodActiveDirectory_Dashboard.SubTitle"></localize></div>
+            <div class="description"><localize key="ThreewoodActiveDirectory_Dashboard.Description"></localize></div>            
+        </div>
+    </div>
+
+    <div class="row-fluid">
+        <div class="btn-group">
+            <a class="btn" ng-disabled="actionInProgress" ng-click="toggleModal(getAllADUsers())" prevent-default>
+                <localize key="ThreewoodActiveDirectory_Dashboard.LoadButton">Load</localize>
+            </a>
+        </div>
+        <div class="btn-group">
+            <a class="btn btn-danger" ng-disabled="actionInProgress" ng-click="toggleModal(ImportSelectedUsers())" prevent-default>
+                <localize key="ThreewoodActiveDirectory_Dashboard.ImportButton">Import</localize>
+            </a>
+        </div>
+        <div class="btn-group">
+            <a class="btn btn-danger" ng-disabled="actionInProgress" ng-click="toggleModal(DeleteAllMembers())" prevent-default>
+                <localize key="ThreewoodActiveDirectory_Dashboard.DeleteButton">Delete</localize>
+            </a>
+        </div>               
+    </div>    
+
+    <div class="row-fluid">
+        <div ng-if="rowCollection.totalItems > 0">
+            <table st-table="rowCollection.items" class="table table-striped st-table">
+                <thead>
+                    <tr>
+                        <th></th>
+                        <th><input st-search="DisplayName" placeholder="Display Name" /></th>
+                        <th><input st-search="LoginName" placeholder="Login Name" /></th>
+                        <th><input st-search="EmailAddress" placeholder="Email Address" /></th>
+                        <th><input st-search="GUID" placeholder="GUID" /></th>
+                    </tr>
+                    <tr>
+                        <th><st-select-all  st-get-selected="selectedItem.value" ></st-select-all></th>
+                        <th st-sort="DisplayName">Name</th>
+                        <th st-sort="Login">Login</th>
+                        <th st-sort="EmailAddress">Email</th>
+                        <th st-sort="GUID">GUID</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr st-select-row="row" st-get-selected="selectedItem.value" st-select-mode="multiple" ng-repeat="row in rowCollection.items">
+                        <td></td>
+                        <td>{{row.DisplayName}}</td>
+                        <td>{{row.LoginName}}</td>
+                        <td><a ng-href="mailto:{{row.EmailAddress}}">{{row.EmailAddress}}</a></td>
+                        <td>{{row.GUID}}</td>
+                    </tr>
+                </tbody>
+
+                <tfoot>
+                    <tr>
+                        <td colspan="5" class="text-center">
+                            <div is-triggered="isTriggered.value" st-items-by-page="20" st-pagination="" st-template="/App_Plugins/ThreewoodActiveDirectory/template/pagination.custom.html"></div>
+                        </td>
+                    </tr>
+                </tfoot>
+            </table>
+
+            <div class="no-results" ng-if="rowCollection.totalItems == 0">
+                No records loaded
+            </div>
+        </div>        
+    </div>
+
+    <modal-dialog callback-fn='actionName' show='modalShown' width='200px' height='15%'><p>Are you sure to proceed action?</p>   
+</div>

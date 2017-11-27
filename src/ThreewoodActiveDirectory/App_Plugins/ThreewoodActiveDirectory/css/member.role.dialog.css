@@ -1,0 +1,16 @@
+﻿.memberRole-dialog .container {
+    overflow-y: auto;            
+}
+
+.memberRole-dialog .header {
+    margin-bottom: 10px;    
+}
+
+.memberRole-dialog .horizontalline {
+    margin: 0px 0px 10px 0px;
+    border-color: darkgray;
+}
+
+.memberRole-dialog input[type="checkbox"] {
+    vertical-align: top;
+}

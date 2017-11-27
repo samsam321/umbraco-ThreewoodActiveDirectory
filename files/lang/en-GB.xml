@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<language alias="en-GB" intName="English (US)" localName="English (US)" lcid="" culture="en-US">
+  <creator>
+    <name>ThreewoodActiveDirectory</name>
+    <link>https://github.com/samsam321/umbraco-ThreewoodActiveDirectory</link>
+  </creator>
+  <area alias="ThreewoodActiveDirectory">
+    <!-- DASHBOARD -->
+    <!--<key alias="Dashboard.Title"><![CDATA[Welcome {{vm.UserName}} to Threewood Active Directory Dashboard]]></key>-->
+    <key alias="Dashboard.Title">Threewood Active Directory Dashboard</key>
+    <key alias="Dashboard.SubTitle"><![CDATA[Welcome to use Threewood Active Directory Dashboard.]]></key>
+    <key alias="Dashboard.Description">
+      <![CDATA[<p>1. Press Load button to load the AD user from AD</p>
+      <p>2. Select the user for import</p>
+      <p>3. Press Import button to import selected user</p>
+      <p style="color: red;">4. Press delete button to DELETE ALL member of umbraco (CAUTION)</p>
+      <p>P.S The action may take a while, it depends on number of entity of Active Directory. Please patient to wait until the notification message shown.</p>
+      ]]>
+    </key>
+    <key alias="Dashboard.LatestChanges"><![CDATA[]]></key>
+    <key alias="Dashboard.VersionHistory"><![CDATA[]]></key>
+    <key alias="Dashboard.LoadButton">Load</key>
+    <key alias="Dashboard.ImportButton">Import</key>
+    <key alias="Dashboard.UpdateButton">Update</key>
+    <key alias="Dashboard.DeleteButton">Delete</key>    
+    <key alias="Dashboard.LoadInProgress">Loading in progress. Please wait until you see results</key>
+    <key alias="Dashboard.MemberRole.Dialog.Header">Assign Target Roles</key>
+    <key alias="Dashboard.MemberRole.Dialog.Check">Check/Uncheck all</key>
+  </area>
+</language>
