@@ -24,7 +24,7 @@ After installed,
 this setting will let umbraco use ThreewoodActiveDirectory As Membership Provider, member login authenicate by your own AD
 	
 	
-2. In  <appSettings> section add
+2. In  appSettings section add
 
 ```
 <!-- ThreewoodActiveDirectory-->
@@ -44,7 +44,7 @@ domain host name = abc
 	
 all member imported login name become abc\yourlogin
 	
-3. In  <connectionStrings> add
+3. In connectionStrings add
 	
 ```    
 <add name="LDAPConnectionString" connectionString="LDAP://yourownAD" />
