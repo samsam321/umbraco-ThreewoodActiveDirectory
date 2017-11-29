@@ -49,3 +49,6 @@ all member imported login name become abc\yourlogin
 ```    
 <add name="LDAPConnectionString" connectionString="LDAP://yourownAD" />
 ```
+
+4. In backoffice member type , add two properties ( see screen capture )
+GUID, Distinguished Name
