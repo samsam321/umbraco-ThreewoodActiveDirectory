@@ -19,11 +19,6 @@ namespace ThreewoodActiveDirectory.Provider
     {        
         public override bool ValidateUser(string username, string password)
         {
-            //MemberHelper.DeleteMembersOfType(1044);
-            //List<string> groups = new List<string>();
-            //groups.Add("Test Group");
-            //ImportADAccount(CIC_DOMAIN, groups);
-
             ActiveDirectoryHelper activeDirectoryHelper = new ActiveDirectoryHelper();
             if(MemberHelper.FindMemberByUsername(username) != null && activeDirectoryHelper.ValidateUser(username, password))            
             {            
@@ -33,7 +28,6 @@ namespace ThreewoodActiveDirectory.Provider
             {
                 return false;
             }            
-        }
-            
+        }            
     }
 }
